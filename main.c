@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
 {
     if (argv[1] == 0)
     {
-        printf("Adds a prefixed expression. Example: math_calc \"3*(5+4/2)\"\r\n");
+        printf("Adds a infixed expression. Example: math_calc \"3*(5+4/2)\"\r\n");
     }
     else
     {
