@@ -1,20 +1,20 @@
-#include "stack.h"
+#include "doubleStack.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
 
-st_value *initStack(int size)
+DoubleStack *db_initStack(int size)
 {
-    st_value *tmp = malloc(sizeof(st_value));
+    DoubleStack *tmp = malloc(sizeof(DoubleStack));
     tmp->size = size;
     tmp->header = -1;
-    tmp->val = malloc(size * sizeof(char *));
+    tmp->val = malloc(size * sizeof(double));
     return tmp;
 }
 
-char *pull(st_value *stack)
+double db_pull(DoubleStack *stack)
 {
-    char *ret;
+    double ret;
     if (stack->header == -1)
         printf("Empty stack!\n");
     else
@@ -25,7 +25,7 @@ char *pull(st_value *stack)
     return ret;
 }
 
-void push(st_value *stack, char *val)
+void db_push(DoubleStack *stack, double val)
 {
     if (stack->header == stack->size - 1)
     {
@@ -38,14 +38,14 @@ void push(st_value *stack, char *val)
     }
 }
 
-char isEmpty(st_value *stack)
+char db_isEmpty(DoubleStack *stack)
 {
     if (stack->header == -1)
         return 1;
     return 0;
 }
 
-char *top(st_value *stack)
+double db_top(DoubleStack *stack)
 {
     if (stack->header == -1)
     {
@@ -56,7 +56,7 @@ char *top(st_value *stack)
     return stack->val[stack->header];
 }
 
-void pop(st_value *stack)
+void db_pop(DoubleStack *stack)
 {
     if (stack->header == -1)
     {
@@ -68,19 +68,7 @@ void pop(st_value *stack)
     }
 }
 
-int height(st_value *stack)
+int db_height(DoubleStack *stack)
 {
     return stack->header;
-}
-
-char *dump(st_value *stack)
-{
-    // char *ret = malloc(height(stack) * sizeof(char));
-
-    // for (int i = 0; i < height(stack); i++)
-    // {
-    //     ret[i] = pull(stack);
-    // }
-    // return ret;
-    return 0;
 }
