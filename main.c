@@ -4,17 +4,24 @@
 #include "evaluatePrefix.h"
 #include "mountPrefix.h"
 
-int main()
+int main(int argc, char *argv[])
 {
-    const char *infix = "(3-4/2)/(9/3+5)\0"; // /-3/42+/935
+    if (argv[1] == 0)
+    {
+        printf("Adds a prefixed expression. Example: math_calc \"3*(5+4/2)\"\r\n");
+    }
+    else
+    {
+        const char *infix = argv[1];
 
-    char *prefix = convert(infix);
+        char *prefix = convert(infix);
 
-    printf("Infix: %s || Prefix: %s\r\n", infix, prefix);
+        printf("Infix: %s || Prefix: %s\r\n", infix, prefix);
 
-    double result = evaluatePrefix(prefix);
+        double result = evaluatePrefix(prefix);
 
-    printf("Result: %lf\r\n", result);
+        printf("Result: %lf\r\n", result);
+    }
 
     return 0;
 }
