@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 
         double result = evaluatePrefix(prefix);
 
-        printf("Result: %lf\r\n", result);
+        printf("Result : %lf\r\n", result);
     }
 
     return 0;
