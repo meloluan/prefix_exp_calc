@@ -1,4 +1,4 @@
-# Prefix expression conversion and calculation
+# Prefixed expression conversion and calculation
 
 ## Use:
 ```
