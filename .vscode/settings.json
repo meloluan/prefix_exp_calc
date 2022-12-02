@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "ndostack.h": "c",
+        "limits": "c",
+        "chrono": "c",
+        "__node_handle": "c",
+        "__split_buffer": "c",
+        "array": "c",
+        "iterator": "c",
+        "string": "c",
+        "string_view": "c",
+        "unordered_map": "c",
+        "vector": "c",
+        "stack.h": "c"
+    }
+}
