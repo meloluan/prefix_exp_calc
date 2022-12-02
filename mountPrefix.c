@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 
+
 char isOperator(char val)
 {
     switch (val)
@@ -25,6 +26,7 @@ int getOperatorPriority(char operator)
         return 2;
     return 0;
 }
+
 
 void resolveOperand(StrStack *operators, StrStack *operands)
 {
